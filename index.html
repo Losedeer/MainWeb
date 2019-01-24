@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Losedeer</title>
+<link rel="stylesheet" href="http://cdn.dowebok.com/77/css/jquery.fullPage.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="./fa/css/font-awesome.css">
+<link rel="stylesheet" href="./root_css/style.css">
+<style>
+.section { text-align: center; font: 50px "Microsoft Yahei"; color: #fff;}
+</style>
+
+
+
+</head>
+
+<body>
+
+
+
+<div id="dowebok">
+
+
+	<div class="section  container no_pad_mar" id = "section_1" v-on:click.stop = "closeIndex">
+		<div class = "section_body">
+			<!-- 隐藏封面层 -->
+			<transition name="concel-head" >
+			<div id = "concel_head" v-if="showHead">
+
+				<div class="row">
+					<div class="col-md-6 head_left">
+				  		<div class= "head_title">
+				  			<h1 class ="page-header">等一次，回眸</h1>
+				  		</div>
+
+				  		<div class="head_user">
+							<div class="btn-group" role="group" >
+							  <button type="button" class="btn btn-default">
+							  	<span class = "fa fa-qq"></span>
+							  </button>
+							  <button type="button" class="btn btn-default">
+							  	<span class = "fa fa-wechat"></span>
+							  </button>
+							  <button type="button" class="btn btn-default">
+							  	<span class = "fa fa-facebook-square"></span>
+							  </button>
+							</div>
+						</div>
+
+					  	<div class= "head_form">
+					  		<form>
+								<div class="form-group">
+								<label for="exampleInputEmail1">Name</label>
+								<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Name">
+								</div>
+
+								<div class="form-group">
+								<label for="exampleInputPassword1">Iphone</label>
+								<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Iphone">
+								</div>
+								<br>
+
+								<button type="submit" class="btn btn-info">Submit</button>
+								<button type="submit" class="btn btn-warning">Reset</button>
+							</form>
+						</div>
+						
+					</div>
+
+				  <div class="col-md-6 head_right" v-on:click = "clickIdx">
+				  	<div class = "head_pic"></div>
+				  </div>
+				</div>
+
+
+
+			</div>
+			</transition>
+
+			<!-- 斜角阴影 -->
+			<transition name="concel-left">
+			<div id="section_1_left"  v-if="showLeft"></div>
+			</transition>
+
+		</div>
+
+			<!-- logo -->
+			<transition name="concel-cha">
+			<a href="#"><div id = "logo" v-if="showCha"></div></a>
+			</transition>
+
+			<!-- motto -->
+			<transition name="concel-cha">
+		    <div id = "motto" v-if="showCha"></div>
+		    </transition>
+
+			<a href="https://github.com/Losedeer/Losedeer.github.io"><button class = " btn btn-default btn_github" title = "一起开发！"><span>Github</span></button></a>
+
+		    <transition name="concel-btn">
+		    <div id = "index" v-if = "showBtnIdx">
+				<button type = "button" id="button_index" class =" btn btn-default"  v-on:click = "clickIdx">
+					<span class= "glyphicon glyphicon-list" aria-hidden="true"></span>
+				</button>
+				<!-- <div class = "list-group" id = "button_index_group" v-show = "gourpItems">
+					<button type="button" class="list-group-item">demo1</button>
+					<button type="button" class="list-group-item">demo2</button>
+					<button type="button" class="list-group-item">demo3</button>
+					<button type="button" class="list-group-item">demo4</button>
+				</div> -->
+
+			</div>
+			<transition name="concel-cha">
+
+	</div>
+
+
+
+
+	<div class="section">
+		<h1 class= ""><a href="blog.html" style= "color:white">个人博客站</a></h1>
+
+
+
+
+
+
+
+		
+		
+	</div>
+
+	<div class="section">
+		<h3>个人博客站</h3>
+	</div>
+
+	<div class="section">
+		<h3>加油</h3>
+		<p></p>
+	</div>
+
+</div>
+
+<script src="http://cdn.staticfile.org/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://cdn.dowebok.com/77/js/jquery.fullPage.min.js"></script>
+<script src="./root_js/ios-parallax.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="./root_js/vue.js"></script>
+<script src="./root_js/main.js"></script>
+
+</body>
+</html>
