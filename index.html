@@ -4,146 +4,98 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <title>Losedeer</title>
-<link rel="stylesheet" href="http://cdn.dowebok.com/77/css/jquery.fullPage.css">
 <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="./fa/css/font-awesome.css">
 <link rel="stylesheet" href="./root_css/style.css">
+
 <style>
-.section { text-align: center; font: 50px "Microsoft Yahei"; color: #fff;}
+
 </style>
-
-
-
 </head>
 
 <body>
 
+<!-- navigator bar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
 
-<div id="dowebok">
 
+<div id ="fullpage">
 
-	<div class="section  container no_pad_mar" id = "section_1" v-on:click.stop = "closeIndex">
-		<div class = "section_body">
-			<!-- 隐藏封面层 -->
-			<transition name="concel-head" >
-			<div id = "concel_head" v-if="showHead">
-
-				<div class="row">
-					<div class="col-md-6 head_left">
-				  		<div class= "head_title">
-				  			<h1 class ="page-header">等一次，回眸</h1>
-				  		</div>
-
-				  		<div class="head_user">
-							<div class="btn-group" role="group" >
-							  <button type="button" class="btn btn-default">
-							  	<span class = "fa fa-qq"></span>
-							  </button>
-							  <button type="button" class="btn btn-default">
-							  	<span class = "fa fa-wechat"></span>
-							  </button>
-							  <button type="button" class="btn btn-default">
-							  	<span class = "fa fa-facebook-square"></span>
-							  </button>
-							</div>
-						</div>
-
-					  	<div class= "head_form">
-					  		<form>
-								<div class="form-group">
-								<label for="exampleInputEmail1">Name</label>
-								<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Name">
-								</div>
-
-								<div class="form-group">
-								<label for="exampleInputPassword1">Iphone</label>
-								<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Iphone">
-								</div>
-								<br>
-
-								<button type="submit" class="btn btn-info">Submit</button>
-								<button type="submit" class="btn btn-warning">Reset</button>
-							</form>
-						</div>
-						
-					</div>
-
-				  <div class="col-md-6 head_right" v-on:click = "clickIdx">
-				  	<div class = "head_pic"></div>
-				  </div>
-				</div>
-
-
-
-			</div>
-			</transition>
-
-			<!-- 斜角阴影 -->
-			<transition name="concel-left">
-			<div id="section_1_left"  v-if="showLeft"></div>
-			</transition>
-
-		</div>
-
-			<!-- logo -->
-			<transition name="concel-cha">
-			<a href="#"><div id = "logo" v-if="showCha"></div></a>
-			</transition>
-
-			<!-- motto -->
-			<transition name="concel-cha">
-		    <div id = "motto" v-if="showCha"></div>
-		    </transition>
-
-			<a href="https://github.com/Losedeer/Losedeer.github.io"><button class = " btn btn-default btn_github" title = "一起开发！"><span>Github</span></button></a>
-
-		    <transition name="concel-btn">
-		    <div id = "index" v-if = "showBtnIdx">
-				<button type = "button" id="button_index" class =" btn btn-default"  v-on:click = "clickIdx">
-					<span class= "glyphicon glyphicon-list" aria-hidden="true"></span>
-				</button>
-				<!-- <div class = "list-group" id = "button_index_group" v-show = "gourpItems">
-					<button type="button" class="list-group-item">demo1</button>
-					<button type="button" class="list-group-item">demo2</button>
-					<button type="button" class="list-group-item">demo3</button>
-					<button type="button" class="list-group-item">demo4</button>
-				</div> -->
-
-			</div>
-			<transition name="concel-cha">
-
+	<!-- page 1 -->
+	<div class="section">
 	</div>
 
-
-
-
+	<!-- page 2 -->
 	<div class="section">
-		<h1 class= ""><a href="blog.html" style= "color:white">个人博客站</a></h1>
-
-
-
-
-
-
-
-		
-		
+		迷陆
 	</div>
 
+	<!-- page 3 -->
 	<div class="section">
-		<h3>个人博客站</h3>
+		迷鹿
 	</div>
 
+	<!-- page 4 -->
 	<div class="section">
-		<h3>加油</h3>
-		<p></p>
+		迷路
 	</div>
 
 </div>
 
 <script src="http://cdn.staticfile.org/jquery/1.8.3/jquery.min.js"></script>
-<script src="http://cdn.dowebok.com/77/js/jquery.fullPage.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/fullpage.min.js"></script>
 <script src="./root_js/ios-parallax.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="./root_js/vue.js"></script>
