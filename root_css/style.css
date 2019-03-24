@@ -1,0 +1,26 @@
+.navbar{ 
+      filter:alpha(opacity=80);  
+      -moz-opacity:0.8;   
+      opacity: 0.8;  
+}
+
+.navbar-topic{
+	font-size: 25px;
+	margin-left: 45px;
+	padding-right: 40px;
+    color: #a7d7c5;
+}
+.upper
+{
+	color: #FFC125;
+}
+
+.testCor
+{
+	color:gray;
+}
+
+.btn-menu
+{
+	left: 50px;
+}
