@@ -49,7 +49,7 @@ var myFullpage = new fullpage('#fullpage', {
 	//设计
 	controlArrows: true,
 	verticalCentered: true,
-	sectionsColor : ['white', '#4BBFC3', '#7BAABE', '#1bbc9b'],
+	sectionsColor : ['#f6f5f5', '#e9e4e6', '#3bb4c1', '#048998'],
 	paddingTop: '',
 	paddingTop: '3em',
 	paddingBottom: '10px',
