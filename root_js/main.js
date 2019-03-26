@@ -49,10 +49,10 @@ var myFullpage = new fullpage('#fullpage', {
 	//设计
 	controlArrows: true,
 	verticalCentered: true,
-	sectionsColor : ['#D7FFF1', '#00adb5', '#393e46', '#222831'],
+	sectionsColor : ['white', '#00adb5', '#393e46', '#222831'],
 	paddingTop: '',
-	paddingTop: '3em',
-	paddingBottom: '10px',
+	paddingTop: '',	//3em
+	paddingBottom: '', //10px
 	fixedElements: '',
 	responsiveWidth: 0,
 	responsiveHeight: 0,
@@ -80,8 +80,8 @@ var myFullpage = new fullpage('#fullpage', {
 *	Set ios.parallax 
 */
 $(document).ready(function() {
-  $('.section_body').iosParallax({
-	movementFactor: 120
+  $('#section_1_body').iosParallax({
+	movementFactor: 500
   });
 });
 
