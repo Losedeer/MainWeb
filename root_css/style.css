@@ -94,3 +94,19 @@
 	position: absolute;
 
 }
+
+#section_2_body
+{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background:white;
+}
+
+
+
+#blog_person
+{
+	width: 10%;
+	height: 10%;
+}
