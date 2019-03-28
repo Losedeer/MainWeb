@@ -80,7 +80,7 @@
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	background:url(../root_images/section_1_bg.jpg) no-repeat 100%;
+	/*background:url(../root_images/section_1_bg.jpg) no-repeat 100%;*/
 }
 
 #section_left
@@ -92,21 +92,76 @@
 	border-radius: 20px;
 	background-color: rgba(0,0,0,0.4);
 	position: absolute;
-
+	/*color: white;*/
 }
-
+/*page 1*/
 #section_2_body
 {
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	background:white;
+	background-color: #EFFFE9;
+}
+
+#section_2_body .blog_kind
+{
+	width: 12%;
+	height: 28%;
+	background-color: white;
+	position: absolute;
+	border-radius: 10px;
+	box-shadow: -29px 29px 60px -7px hsla(203.4334763948498,12.85%,12.41%,.13);
+	transition:box-shadow 450ms ease;
+}
+
+#section_2_body .blog_kind:hover
+{
+	box-shadow: -60px 60px 60px -7px hsla(203.4334763948498,12.85%,12.41%,.13);
+	transition:box-shadow 450ms ease;
+}
+
+#section_2_body #blog_person
+{
+	top:15%;
+	left:44%;
+	position: absolute;
+}
+
+#section_2_body #blog_csdn
+{
+	top:55%;
+	left:20%;
+}
+
+#section_2_body #blog_segmentFault
+{
+	top:55%;
+	left:44%;
+}
+
+#section_2_body #blog_jianshu
+{
+	top:55%;
+	left:68%;
 }
 
 
-
-#blog_person
+#section_2_body .blog_pic
 {
-	width: 10%;
-	height: 10%;
+	width: 100%;
+	height: 48%;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	/*background-color: red;*/
+	position: absolute;
+	/*background:url(../root_images/graph.jpg) no-repeat;*/
+}
+#section_2_body .blog_pic img{
+	display: block;
+	left: 20px;	
+	width: 80%;
+    height: 100%;
+    margin: auto;
+    border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
 }
