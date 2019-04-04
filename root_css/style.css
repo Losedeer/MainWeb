@@ -105,8 +105,8 @@
 
 #section_2_body .blog_kind
 {
-	width: 12%;
-	height: 28%;
+	width: 11%;
+	height: 30%;
 	background-color: white;
 	position: absolute;
 	border-radius: 10px;
@@ -116,8 +116,8 @@
 
 #section_2_body .blog_kind:hover
 {
-	box-shadow: -60px 60px 60px -7px hsla(203.4334763948498,12.85%,12.41%,.13);
-	transition:box-shadow 450ms ease;
+	box-shadow: -100px 100px 60px -10px hsla(203.4334763948498,12.85%,12.41%,.13);
+	transition:box-shadow 400ms ease;
 }
 
 #section_2_body #blog_person
@@ -150,18 +150,55 @@
 {
 	width: 100%;
 	height: 48%;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
 	/*background-color: red;*/
 	position: absolute;
 	/*background:url(../root_images/graph.jpg) no-repeat;*/
+
 }
 #section_2_body .blog_pic img{
 	display: block;
-	left: 20px;	
-	width: 80%;
+	width: 100%;
     height: 100%;
     margin: auto;
-    border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
+    border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+#section_2_body .blog_pic #blog_person_img
+{
+	width: 80%;
+	height: 100%;
+	left: 10%;
+
+	position: absolute;
+
+}
+#section_2_body .blog_pic #blog_csdn_img
+{
+	top:18%;
+	left: 10%;
+	width: 80%;
+	height: 60%;
+	position: absolute;
+
+}
+
+#section_2_body .blog_pic #blog_segmentFault_img
+{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+#section_2_body .blog_pic #blog_jianshu_img
+{
+	display: block;
+	top: 7%;
+	width: 100%;
+	height: 86%;
+	position: absolute;
+	overflow: hidden;
+	position: absolute;
 }
