@@ -70,7 +70,13 @@ var myFullpage = new fullpage('#fullpage', {
 
 	//事件
 	onLeave: function(origin, destination, direction){},
-	afterLoad: function(origin, destination, direction){},
+	afterLoad: function(origin, destination, direction){
+		if(origin.index == 1)
+		{
+			alert("dd");
+			vueMain.showTriangle();
+		}
+	},
 	afterRender: function(){},
 	afterResize: function(width, height){},
 	afterResponsive: function(isResponsive){},
@@ -93,12 +99,12 @@ var myFullpage = new fullpage('#fullpage', {
 var vueMain =  new Vue({
 		el:'#fullpage',
 		data:{
-			showTriangle:false
+			show:false
 		},
 		methods:{
 			/*处理点击 Index 之外的画面，关闭索引选项*/
 			showTriangle(){
-				this.showTriangle  = !this.showTriangle;
+				this.show  = !this.show;
 			}
 		}
 
