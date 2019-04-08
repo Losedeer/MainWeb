@@ -1,3 +1,6 @@
+
+window.onload = function () {
+
 /*
 *	Set fullpage.js 
 */
@@ -53,7 +56,7 @@ var myFullpage = new fullpage('#fullpage', {
 	paddingTop: '',
 	paddingTop: '',	//3em
 	paddingBottom: '', //10px
-	fixedElements: '',
+	fixedElements: '.navbar',
 	responsiveWidth: 0,
 	responsiveHeight: 0,
 	responsiveSlides: false,
@@ -76,28 +79,27 @@ var myFullpage = new fullpage('#fullpage', {
 });
 
 
-/*
-*	Set ios.parallax 
-*/
-$(document).ready(function() {
-  $('#section_1_body').iosParallax({
-	movementFactor: 500
-  });
-});
+	/*
+	*	Set ios.parallax 
+	*/
+	$(document).ready(function() {
+	  $('#section_1_body').iosParallax({
+		movementFactor: 500
+	  });
+	});
 
-/*
-*	Vue.js
-*/
-	new Vue({
-		el:'',
+}
+
+var vueMain =  new Vue({
+		el:'#fullpage',
 		data:{
-			
+			showTriangle:false
 		},
 		methods:{
-			
+			/*处理点击 Index 之外的画面，关闭索引选项*/
+			showTriangle(){
+				this.showTriangle  = !this.showTriangle;
+			}
 		}
 
-	})
-
-window.onload = function () {
-}
+	});

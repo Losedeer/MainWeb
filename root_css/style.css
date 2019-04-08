@@ -14,6 +14,7 @@
       filter:alpha(opacity=60);  
       -moz-opacity:0.6;   
       opacity: 0.6;  
+      position: fixed;
 }
 .container-fluid{
 	position: fixed;
@@ -80,6 +81,7 @@
 	width: 100%;
 	height: 100%;
 	position: absolute;
+	background-color: #00b9f1;
 	/*background:url(../root_images/section_1_bg.jpg) no-repeat 100%;*/
 }
 

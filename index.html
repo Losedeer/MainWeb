@@ -12,9 +12,10 @@
 
 <body>
 
-<!-- navigator bar -->
+<div id ="fullpage">
 
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <!-- navigator bar -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container-fluid"> 
 
         <div class="navbar-brand"><span class = "testCor"><span class = "initials">L</span>ose<span class = "initials">D</span>eer</span></div>
@@ -28,10 +29,8 @@
         </div>
         
     </div>
-</nav>
+    </nav>
 
-
-<div id ="fullpage">
 
 	<!-- page 1 -->
 	<div class="section" id ="section_1">
@@ -45,7 +44,7 @@
 
             <div class="" id = "section_middle">
                 
-
+                {{ewfewf}}
             </div>
         </div>
 	</div>
@@ -92,13 +91,13 @@
 	<div class="section">
 	
         <div id = "section_3_body">
-            <div id = "left_triangle">
+            <div id = "left_triangle" v-show = "showTriangle">
                 
 
             </div>
 
 
-            <div id = "right_triangle">
+            <div id = "right_triangle" v-show = "showTriangle">
                 
 
             </div>
@@ -113,6 +112,7 @@
 	</div>
 
 </div>
+
 <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="./root_js/ios-parallax.js"></script>
