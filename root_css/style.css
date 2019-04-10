@@ -232,11 +232,11 @@
 }
 
 #section_3_body .slide-fade-left-enter-active {
-  transition: all 1s ease;
+  transition: all 0.8s ease;
 }
 
 #section_3_body .slide-fade-right-enter-active {
-  transition: all 1s ease;
+  transition: all 0.8s ease;
 }
 
 /*#section_3_body .slide-fade-leave-active {
