@@ -73,7 +73,6 @@ var myFullpage = new fullpage('#fullpage', {
 	afterLoad: function(origin, destination, direction){
 		if(origin.index == 1)
 		{
-			alert("dd");
 			vueMain.showTriangle();
 		}
 	},
@@ -104,7 +103,10 @@ var vueMain =  new Vue({
 		methods:{
 			/*处理点击 Index 之外的画面，关闭索引选项*/
 			showTriangle(){
-				this.show  = !this.show;
+				if(!this.show)
+				{
+					this.show  = !this.show;
+				}
 			}
 		}
 
