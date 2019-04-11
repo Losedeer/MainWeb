@@ -119,7 +119,16 @@
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	/*background-color: #EFFFE9;*/
+	background-color: white;
+}
+
+#section_2_body #section_2_left
+{
+	position: absolute;
+	width: 65%;
+	height: 100%;
+	left: 35%;
+	background:url(../root_images/section_2_right.jpg) no-repeat 100% 50%;
 }
 
 #section_2_body .blog_kind
