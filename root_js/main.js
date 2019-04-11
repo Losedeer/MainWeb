@@ -52,7 +52,7 @@ var myFullpage = new fullpage('#fullpage', {
 	//设计
 	controlArrows: true,
 	verticalCentered: true,
-	sectionsColor : ['white', '#00adb5', '#393e46', '#222831'],
+	sectionsColor : ['white', '#E1EEF6', '#222831', '#222831'],
 	paddingTop: '',
 	paddingTop: '',	//3em
 	paddingBottom: '', //10px
@@ -84,16 +84,18 @@ var myFullpage = new fullpage('#fullpage', {
 });
 
 
+}
+
+
 	/*
 	*	Set ios.parallax 
 	*/
 	$(document).ready(function() {
 	  $('#section_1_body').iosParallax({
-		movementFactor: 500
+		movementFactor: 300
 	  });
 	});
 
-}
 
 var vueMain =  new Vue({
 		el:'#fullpage',
