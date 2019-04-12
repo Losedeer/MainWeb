@@ -99,9 +99,12 @@
 #section_1_body #blue_floor #topic
 {
 	left:24%;
-	top:15%;
+	top:18%;
 	position: absolute;
 
+}
+#section_1_body #blue_floor #topic h1{
+	font-size: 42px;
 }
 #section_1_body #blue_floor #topic footer
 {
@@ -110,8 +113,17 @@
 
 #section_1_body #blue_floor #topic li
 {
-	font-size: 20px;
+	font-size: 23px;
 }
+
+#section_1_body #login_btn
+{
+	position: absolute;
+	left: 82%;
+	top:18%;
+	font-size: 10px;
+}
+
 
 /*section 2*/
 #section_2_body
@@ -134,7 +146,7 @@
 #section_2_body .blog_kind
 {
 	width: 11%;
-	height: 30%;
+	height: 30%; 
 	background-color: white;
 	position: absolute;
 	border-radius: 10px;
