@@ -14,7 +14,7 @@
       filter:alpha(opacity=60);  
       -moz-opacity:0.6;   
       opacity: 0.6;  
-      position: fixed;
+      /*position: fixed;*/
       background: #DAE9F4;
 
 }
@@ -71,7 +71,6 @@
 {
 	font-size: 6px;
 }
-
 
 /*section 1*/
 #section_1{
@@ -201,7 +200,6 @@
 	display: block;
 	width: 100%;
     height: 100%;
-    margin: auto;
     border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
 }
@@ -211,7 +209,6 @@
 	width: 80%;
 	height: 100%;
 	left: 10%;
-
 	position: absolute;
 
 }
@@ -222,7 +219,6 @@
 	width: 80%;
 	height: 60%;
 	position: absolute;
-
 }
 
 #section_2_body .blog_pic #blog_segmentFault_img
@@ -243,11 +239,78 @@
 	position: absolute;
 }
 
+.sec_title_1
+{
+	width: 110px;
+	height: 110px;
+	position: absolute;
+	top:110px;
+	left: 120px;
+	/*background:url(../root_images/chinese_bg.png) no-repeat 100% 100%;*/
+}
+
+.sec_title_1 img
+{
+	width: 100%;
+    height: 100%;
+    filter:alpha(opacity=60);  
+      -moz-opacity:0.6;   
+      opacity: 0.6;  
+}
+
+.sec_title_1 .chinese_title_1
+{
+	top:6px;
+	left: 18px;
+	display:block; 
+	position: absolute;
+	font-size: 66px;
+	color: #333030;
+}	
+
+
+.sec_title_2
+{
+	width: 110px;
+	height: 110px;
+	position: absolute;
+	top:110px;
+	left: 230px;
+}
+.sec_title_2 img
+{
+	width: 100%;
+    height: 100%;
+    filter:alpha(opacity=60);  
+      -moz-opacity:0.6;   
+      opacity: 0.6;  
+}
+
+.sec_title_2 .chinese_title_2
+{
+	top:6px;
+	left: 18px;
+	display:block; 
+	position: absolute;
+	font-size: 66px;
+	color: #8cd790;
+}	
+
+
+#section_2_body #section_title2_1
+{
+	
+
+}
+
+
 /*section 3*/
 
 #section_3_body
 {
 	/*overflow: hidden;*/
+	width: 100%;
+	height: 100%;
 	position: absolute;
 }
 
@@ -290,4 +353,15 @@
 /* .slide-fade-leave-active for below version 2.1.8 */ {
   transform: translateX(-1000px);
   opacity: 0;
+}
+
+
+/*section 4*/
+
+#section_4_body
+{
+	/*overflow: hidden;*/
+	width: 100%;
+	height: 100%;
+	position: absolute;
 }
