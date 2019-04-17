@@ -125,9 +125,18 @@
 
             <div id = "content">
                 <transition name="slide-fade-right">
-                    <div id = "left_content" v-show = "show">   
+                    <div id = "left_page" v-show = "show">   
                         
-                        
+                        <div id = "right_content">
+                            <h1>Hello world</h1>
+                            <br>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;颜色识别-HSV基本颜色分量范围     一般对颜色空间的图像进行有效处理都是在HSV空间进行的,然后对于基本色中对应的HSV分量需要给定一个严格的范围.</p>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<button class = "btn btn-danger" style = "background-color: #f15c5c">click me</button>
+
+                        </div>
+
+
 
                         <!-- right_triangle -->
                         <div id = "right_triangle"></div>
@@ -139,7 +148,7 @@
                 </transition>
 
                 <transition name="slide-fade-left">
-                    <div id = "right_content" v-show = "show">
+                    <div id = "right_page" v-show = "show">
                         <div id = "left_triangle"></div>
                         
 
