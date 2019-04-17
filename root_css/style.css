@@ -299,7 +299,7 @@
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	background-color: rgb(51,97,188);
+	background-color: #2D5FC2;
 }
 
 #section_3_body #content{
@@ -312,13 +312,35 @@
 {
 	top:28%;
 	width: 47%;
-	height: 74%;
+	height: 72%;
 	left:11%;
 	background-color: white;
-	/*box-show*/
+	box-shadow: -5px -5px 10px -5px hsla(203.4334763948498,12.85%,12.41%,.13);
+	/*box-shadow: -29px 29px 60px -7px hsla(203.4334763948498,12.85%,12.41%,.13);*/
 	position: absolute;
 	z-index: 2;
 	overflow: hidden;
+}
+
+#section_3_body #left_content #btn_right_triangle
+{
+	position: absolute;
+	top:40%;
+	left: 49%;
+	width: 36px;
+	height: 36px;
+	border-radius: 18px;
+	background-color: #4890D8;
+	z-index: 2;
+}
+
+#section_3_body #left_content span{
+	display: block;
+	position: absolute;
+	font-size: 10px;
+	left:12px;
+	top: 12px;
+	color: white;
 }
 
 #section_3_body #left_content #right_triangle
@@ -326,36 +348,41 @@
 	width: 0;
     height: 0;
     left:-10vw;
-    border-top: 50vh solid #2b90d9;
+    border-top: 50vh solid #6090F0;
     border-left: 44vw solid transparent;
     position: absolute;
 }
 
 #section_3_body #right_content
 {
-	top:6%;
+	top:8%;
 	width: 38%;
-	height: 88%;
+	height: 94%;
 	left: 48%;
 	background-color: white;
 	position: absolute;
 	z-index: 1;
+	overflow: hidden;
+	box-shadow: 5px 5px 10px -5px hsla(203.4334763948498,12.85%,12.41%,.13);
 }
 
 #section_3_body #right_content #left_triangle
 {
 	width: 0;
     height: 0;
-    border-bottom: 100px solid red;
-    border-right: 100px solid transparent;
+    position: absolute;;
+    top:52vh;
+    left: -4vw;
+    border-bottom: 55vh solid #303060;
+    border-right: 40vw solid transparent;
 }
 
 #section_3_body .slide-fade-left-enter-active {
-  transition: all 0.8s ease;
+  transition: all 0.85s ease;
 }
 
 #section_3_body .slide-fade-right-enter-active {
-  transition: all 0.8s ease;
+  transition: all 0.85s ease;
 }
 
 /*#section_3_body .slide-fade-leave-active {
@@ -364,13 +391,13 @@
 
 #section_3_body .slide-fade-left-enter
 /* .slide-fade-leave-active for below version 2.1.8 */ {
-  transform: translateX(1000px);
+  transform: translateY(-1000px);
   opacity: 0;
 }
 
 #section_3_body .slide-fade-right-enter
 /* .slide-fade-leave-active for below version 2.1.8 */ {
-  transform: translateX(-1000px);
+  transform: translateY(1000px);
   opacity: 0;
 }
 
