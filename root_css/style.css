@@ -302,13 +302,13 @@
 	background-color: rgb(51,97,188);
 }
 
-#section_3_body #triangle{
+#section_3_body #content{
 	position: absolute;
 	width: 72%;
 	height: 100%;
 	left: 14%;
 }
-#section_3_body #left_triangle
+#section_3_body #left_content
 {
 	top:32%;
 	width: 47%;
@@ -320,7 +320,15 @@
 	z-index: 2;
 }
 
-#section_3_body #right_triangle
+#section_3_body #left_content #right_triangle
+{
+	width: 0;
+    height: 0;
+    border-top: 100px solid red;
+    border-left: 100px solid transparent;
+}
+
+#section_3_body #right_content
 {
 	top:6%;
 	width: 38%;
@@ -329,6 +337,14 @@
 	background-color: white;
 	position: absolute;
 	z-index: 1;
+}
+
+#section_3_body #right_content #left_triangle
+{
+	width: 0;
+    height: 0;
+    border-bottom: 100px solid red;
+    border-right: 100px solid transparent;
 }
 
 #section_3_body .slide-fade-left-enter-active {
