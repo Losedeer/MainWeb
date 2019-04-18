@@ -256,8 +256,8 @@
 {
 	display: block;
 	position: absolute;
-	top:40%;
-	left: 49%;
+	top:42%;
+	left: 50%;
 	width: 36px;
 	height: 36px;
 	border-radius: 18px;
@@ -295,28 +295,74 @@
 	position: absolute;
 	z-index: 1;
 	overflow: hidden;
-	box-shadow: 5px 5px 10px -5px hsla(203.4334763948498,12.85%,12.41%,.13);
+	box-shadow: 5px 5px 10px -2px hsla(203.4334763948498,12.85%,12.41%,.13);
 }
 
 #section_3_body #right_page .blog_kind
 {
 	position: absolute;
 	top:10%;
-	left: 35%;
+	left: 50%;
 	width: 30%;
-	height: 24%;
-	background-color: red;
+	height: 29%;
+	color: black;
+	/*box-shadow: -9px 9px 5px -3px #8EC0E4;*/
+	border-radius: 10px;
+	transition:box-shadow 450ms ease;
+}
+
+#section_3_body #right_page .blog_kind:hover
+{
+	box-shadow: -100px 100px 60px -10px hsla(203.4334763948498,12.85%,12.41%,.13);
+	transition:box-shadow 400ms ease;
+}
+
+#right_page .blog_kind .blog_pic
+{
+	position: absolute;
+	/*top:10%;*/
+	left: 25%;
+	width: 50%;
+	height: 40%;
+	background-color: white;
+
+}
+
+.blog_kind .blog_pic img
+{
+	display: block;
+	width: 150%;
+    height: 135%;
+}
+
+#right_page .blog_kind .blog_content
+{
+	position: absolute;
+	top:50%;
+	left: 25%;
+	width: 70%;
+	height: 50%;
+	/*background-color: blue;*/
 }
 
 #section_3_body #right_page #blog_csdn
 {
 	position: absolute;
-	top:50%;
+	top:40%;
 	left: 35%;
 	width: 30%;
 	height: 24%;
-	background-color: red;
+	/*background-color: red;*/
+}
 
+#section_3_body #right_page #blog_jianshu
+{
+	position: absolute;
+	top:40%;
+	left: 67%;
+	width: 30%;
+	height: 24%;
+	/*background-color: red;*/
 }
 
 
