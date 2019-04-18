@@ -230,7 +230,7 @@
 #section_3_body #left_page
 {
 	top:28%;
-	width: 47%;
+	width: 49%;
 	height: 72%;
 	left:11%;
 	background-color: white;
@@ -280,15 +280,15 @@
 	width: 0;
     height: 0;
     left:-10vw;
-    border-top: 50vh solid #6090F0;
-    border-left: 44vw solid transparent;
+    border-top: 53vh solid #6090F0;
+    border-left: 46vw solid transparent;
     position: absolute;
 }
 
 #section_3_body #right_page
 {
 	top:8%;
-	width: 38%;
+	width: 40%;
 	height: 94%;
 	left: 48%;
 	background-color: white;
@@ -297,6 +297,28 @@
 	overflow: hidden;
 	box-shadow: 5px 5px 10px -5px hsla(203.4334763948498,12.85%,12.41%,.13);
 }
+
+#section_3_body #right_page .blog_kind
+{
+	position: absolute;
+	top:10%;
+	left: 35%;
+	width: 30%;
+	height: 24%;
+	background-color: red;
+}
+
+#section_3_body #right_page #blog_csdn
+{
+	position: absolute;
+	top:50%;
+	left: 35%;
+	width: 30%;
+	height: 24%;
+	background-color: red;
+
+}
+
 
 #section_3_body #right_page #left_triangle
 {
