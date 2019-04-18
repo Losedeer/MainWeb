@@ -6,6 +6,7 @@
 <title>Losedeer</title>
 <link rel="stylesheet" href="./root_css/style.css">
 <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link href='http://cdn.webfont.youziku.com/webfonts/nomal/129280/47031/5cb89170f629d80efc6e4d30.css' rel='stylesheet' type='text/css' />
 </head>
 
 
@@ -80,31 +81,6 @@
 
             </div>
             
-            <div id = "blog_person" class = "blog_kind">
-                <div class = "blog_pic">
-                   <img id = "blog_person_img" src="root_images/blog_1.png">
-                </div>
-            </div>
-
-            <div id = "blog_csdn" class = "blog_kind"> 
-                <div class = "blog_pic">
-                   <img id = "blog_csdn_img" src="root_images/CSDN.jpg">
-                </div>
-            </div>
-
-            <div id = "blog_segmentFault" class = "blog_kind"> 
-                <div class = "blog_pic">
-                   <img id = "blog_segmentFault_img" src="root_images/sifo.jpg">
-                </div>
-            </div>
-
-            <div id = "blog_jianshu" class = "blog_kind"> 
-                <div class = "blog_pic">
-                   <img id = "blog_jianshu_img" src="root_images/jianshu.jpg">
-                </div>
-            </div>
-
-            
         </div>
 
 	</div>
@@ -113,14 +89,9 @@
 	<div class="section">
 	
         <div id = "section_3_body">
-            <!-- title1 -->
-            <div class = "sec_title_1" id = "section_title2">
-                <p class =  "chinese_title_1" id = "chinese_title_1_3">迷</p>
-            </div>
 
-            <!-- title2 -->
-            <div class = "sec_title_2" id = "section_title2_2">
-                <p class =  "chinese_title_2" id = "chinese_title_2_3">陆</p>
+            <div id="title_3">
+                Blog Station
             </div>
 
             <div id = "content">
@@ -141,9 +112,9 @@
                         <!-- right_triangle -->
                         <div id = "right_triangle"></div>
                         <!-- down btn -->
-                        <div id = "btn_right_triangle">
+                        <button id = "btn_right_triangle">
                             <span class = "glyphicon glyphicon-chevron-down"></span>
-                        </div>
+                        </button>
                     </div>
                 </transition>
 
@@ -151,6 +122,12 @@
                     <div id = "right_page" v-show = "show">
                         <div id = "left_triangle"></div>
                         
+                        <div id = "blog_person" class = "blog_kind">
+                            <div class = "blog_pic">
+                                <img id = "blog_person_img" src="root_images/blog_1.png">
+                            </div>
+                        </div>
+
 
                     </div>
                 </transition>
@@ -173,6 +150,24 @@
             <!-- title2 -->
             <div class = "sec_title_2" id = "section_title2_2">
                 <p class =  "chinese_title_2" id = "chinese_title_2_2">路</p>
+            </div>
+
+            <div id = "blog_csdn" class = "blog_kind"> 
+                <div class = "blog_pic">
+                   <img id = "blog_csdn_img" src="root_images/CSDN.jpg">
+                </div>
+            </div>
+
+            <div id = "blog_segmentFault" class = "blog_kind"> 
+                <div class = "blog_pic">
+                   <img id = "blog_segmentFault_img" src="root_images/sifo.jpg">
+                </div>
+            </div>
+
+            <div id = "blog_jianshu" class = "blog_kind"> 
+                <div class = "blog_pic">
+                   <img id = "blog_jianshu_img" src="root_images/jianshu.jpg">
+                </div>
             </div>
         </div>
 	</div>
