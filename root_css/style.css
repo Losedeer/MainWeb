@@ -8,6 +8,11 @@
 	border:0px;
 }
 
+p{
+	/*font-family:'YouYuan';*/
+	font-size: 18px;
+}
+
 /*navigator bar*/
 .navbar
 { 
@@ -103,6 +108,7 @@
 
 }
 #section_1_body #blue_floor #topic h1{
+	font-family:'COCOGOOSE';
 	font-size: 42px;
 }
 #section_1_body #blue_floor #topic footer
@@ -339,9 +345,9 @@
     height: 130%;
 }
 
-.box1{left:25%; top:-15px; position:absolute;  width:0;border-left: 26px solid transparent;border-right: 26px solid transparent;border-bottom: 15px solid #303060;  z-index:5;   }
-.box2{ color:white; font-family:'COCOGOOSE'; font-size: 25px;  left:25%; position:absolute; width: 52px;height: 30px;background-color:#303060; z-index:5;}
-.box3{left:25%; top:30px; position:absolute; width:0;border-top: 15px solid #303060;border-left: 26px solid transparent;border-right: 26px solid transparent; z-index:5; }
+.box1{left:25%; top:-15px; position:absolute;  width:0;border-left: 26px solid transparent;border-right: 26px solid transparent;border-bottom: 15px solid #4F86C6;  z-index:5;   }
+.box2{ color:white; font-family:'COCOGOOSE'; font-size: 25px;  left:25%; position:absolute; width: 52px;height: 30px;background-color:#4F86C6; z-index:5;}
+.box3{left:25%; top:30px; position:absolute; width:0;border-top: 15px solid #4F86C6;border-left: 26px solid transparent;border-right: 26px solid transparent; z-index:5; }
 
 #right_page .blog_kind .blog_content
 {
@@ -354,11 +360,10 @@
 }
 
 .blog_content h3{
-	font-family:'Bebas';
-}
-
-.blog_content p{
-	font-family:'Gotham';
+	font-family:'PingFangSC_R';
+	margin: auto;
+	font-size: 20px;
+	color:#6E7783;
 }
 
 #section_3_body #right_page #blog_csdn
