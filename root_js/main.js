@@ -1,5 +1,74 @@
 
-window.onload = function () {
+
+$(document).ready(function() {
+  
+	/*
+	*	Set ios.parallax 
+	*/
+	$('#section_1_body').iosParallax({
+	movementFactor: 300
+	});
+
+
+
+	/*
+	*	Stars move handele
+	*/
+
+	var starSun = document.getElementById('star_sun');
+	var starEarth = document.getElementById('star_earth');
+	var runTimes = 0
+
+	function starsMove(oDiv,lineA,lineB){
+
+		// alert(oDiv.offsetLeft);
+		// alert(oDiv.offsetTop);
+		var yn = 0;
+		var x0 = 0;
+		var y0 = 0;
+
+		if(runTimes == 0)
+		{
+			x0 = oDiv.offsetLeft;
+			y0 = oDiv.offsetTop;
+			runTimes++;
+		}
+		oDiv.style.left = oDiv.offsetLeft + 1 + 'px';
+
+		 alert(x0);
+		 //alert(yn);
+		//oDiv.style.top =  oDiv.offsetTop + 1 + 'px';
+
+		//oDiv.style.top = oDiv.offsetTop + 1 + 'px';
+	}
+
+	//setInterval 3 4 ...为调用函数的参数
+	setInterval(starsMove,30,starEarth,400,234);
+
+
+
+});
+
+/*
+*	Handle vue
+*/
+var vueMain =  new Vue({
+		el:'#fullpage',
+		data:{
+			show:false
+		},
+		methods:{
+			/*处理点击 Index 之外的画面，关闭索引选项*/
+			showTriangle(){
+				if(!this.show)
+				{
+					this.show  = !this.show;
+				}
+			}
+		}
+
+	});
+
 
 /*
 *	Set fullpage.js 
@@ -85,33 +154,3 @@ var myFullpage = new fullpage('#fullpage', {
 	onSlideLeave: function(section, origin, destination, direction){}
 });
 
-
-}
-
-
-	/*
-	*	Set ios.parallax 
-	*/
-	$(document).ready(function() {
-	  $('#section_1_body').iosParallax({
-		movementFactor: 300
-	  });
-	});
-
-
-var vueMain =  new Vue({
-		el:'#fullpage',
-		data:{
-			show:false
-		},
-		methods:{
-			/*处理点击 Index 之外的画面，关闭索引选项*/
-			showTriangle(){
-				if(!this.show)
-				{
-					this.show  = !this.show;
-				}
-			}
-		}
-
-	});

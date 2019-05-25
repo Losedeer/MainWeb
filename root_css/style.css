@@ -623,13 +623,33 @@ p{
 	height: 234px;
 }
 
-#section_4_body #solarsystem .orbit
+#section_4_body #solarsystem .stars
 {
-	
-	
+	position: absolute;
+	border-radius: 50%/50%;
+	z-index: 2;
 }
 
-#section_4_body #solarsystem #sun
+#section_4_body #solarsystem #star_sun
+{
+	left: 610px;
+	top: 380px;
+	width: 80px;
+	height: 80px;
+	background-color: #FFC125;
+}
+
+#section_4_body #solarsystem #star_earth
+{
+	left:225px; 
+	top:386px;
+	width: 50px;
+	height: 50px;
+	background-color: #63B8FF;
+
+}
+
+#section_4_body #solarsystem #star_mars
 {
 
 
