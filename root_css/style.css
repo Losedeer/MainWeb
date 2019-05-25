@@ -576,6 +576,62 @@ p{
 	width: 100%;
 	height: 100%;
 	position: absolute;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items:center;
 }
 
+#section_4_body #solarsystem
+{
+	/*overflow: hidden;*/
+	position: absolute;
+	width: 1300px;
+	height: 840px;
+	background-color: #1E1E1E;
+}
+
+#section_4_body #solarsystem .orbit
+{
+	position: absolute;
+	border-radius: 50%/50%;
+	border: 1px solid gray;
+	z-index: 1;
+}
+
+#section_4_body #solarsystem #oval_line1
+{
+	left: 50px;
+	top: 70px;
+	width: 1200px;
+	height: 700px;
+}
+
+#section_4_body #solarsystem #oval_line2
+{
+	left: 250px;
+	top: 186px;
+	width: 800px;
+	height: 467px;
+}
+
+#section_4_body #solarsystem #oval_line3
+{
+	left: 450px;
+	top: 303px;
+	width: 400px;
+	height: 234px;
+}
+
+#section_4_body #solarsystem .orbit
+{
+	
+	
+}
+
+#section_4_body #solarsystem #sun
+{
+
+
+}
 
