@@ -35,7 +35,7 @@ $(document).ready(function() {
 		}
 		oDiv.style.left = oDiv.offsetLeft + 1 + 'px';
 
-		 alert(x0);
+		//  alert(x0);
 		 //alert(yn);
 		//oDiv.style.top =  oDiv.offsetTop + 1 + 'px';
 
