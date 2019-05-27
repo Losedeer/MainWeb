@@ -143,9 +143,9 @@ p{
 #section_2_body #section_2_left
 {
 	position: absolute;
-	width: 65%;
+	width: 950px;
 	height: 100%;
-	left: 35%;
+	left: 50%;
 	background:url(../root_images/section_2_right.jpg) no-repeat 100% 50%;
 }
 
@@ -294,10 +294,12 @@ p{
 #section_3_body #left_page #top_pic_1
 {
 	position: absolute;
-	top: 14px;
-	left: 22%;
-	width: 180px;
-	height: 150px;
+	top: 7px;
+	left: 24%;
+	/* width: 174px; */
+	/* height: 144px;*/
+	width:29%;
+	height:26%;
 	background-color: red;
 	z-index: 2;
 }
