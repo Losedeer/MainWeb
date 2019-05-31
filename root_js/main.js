@@ -1,19 +1,17 @@
+$(document).ready(function () {
 
-
-$(document).ready(function() {
-  
 	/*
-	*	Set ios.parallax 
-	*/
+	 *	Set ios.parallax 
+	 */
 	$('#section_1_body').iosParallax({
-	movementFactor: 300
+		movementFactor: 300
 	});
 
 
 
 	/*
-	*	Stars move handele
-	*/
+	 *	Stars move handele
+	 */
 
 	var starSun = document.getElementById('star_sun');
 	var starEarth = document.getElementById('star_earth');
@@ -21,14 +19,12 @@ $(document).ready(function() {
 	var x0 = 0;
 	var y0 = 0;
 
-	function starsMove(oDiv,lineA,lineB)
-	{
+	function starsMove(oDiv, lineA, lineB) {
 
-		//  alert(oDiv.offsetLeft);
+		// alert(oDiv.offsetLeft);
 		// alert(oDiv.offsetTop);
 
-		if(runTimes == 0)
-		{
+		if (runTimes == 0) {
 			//static？
 			x0 = oDiv.offsetLeft;
 			y0 = oDiv.offsetTop;
@@ -39,50 +35,49 @@ $(document).ready(function() {
 		oDiv.style.left = oDiv.offsetLeft + 1 + 'px';
 		xn = oDiv.offsetLeft + 1;
 		//差量计算
-		yn = lineB * Math.sqrt(1 - (Math.pow(Math.abs(xn - (lineA + x0)),2) / Math.pow(lineA,2) )  ) + y0;
+		yn = lineB * Math.sqrt(1 - (Math.pow(Math.abs(xn - (lineA + x0)), 2) / Math.pow(lineA, 2))) + y0;
 
-		 oDiv.style.top = yn + 'px';
-		//  alert(x0);
-		 //alert(yn);
+		oDiv.style.top = yn + 'px';
+		//alert(x0);
+		//alert(yn);
 		//oDiv.style.top =  oDiv.offsetTop + 1 + 'px';
 
 	}
 	//setInterval 3 4 ...为调用函数的参数
-	setInterval(starsMove,30,starEarth,400,234);
+	setInterval(starsMove, 30, starEarth, 400, 234);
 
 
 
 });
 
 /*
-*	Handle vue
-*/
-var vueMain =  new Vue({
-		el:'#fullpage',
-		data:{
-			show:false
-		},
-		methods:{
-			/*处理点击 Index 之外的画面，关闭索引选项*/
-			showTriangle(){
-				if(!this.show)
-				{
-					this.show  = !this.show;
-				}
+ *	Handle vue
+ */
+var vueMain = new Vue({
+	el: '#fullpage',
+	data: {
+		show: false
+	},
+	methods: {
+		/*处理点击 Index 之外的画面，关闭索引选项*/
+		showTriangle() {
+			if (!this.show) {
+				this.show = !this.show;
 			}
 		}
+	}
 
-	});
+});
 
 
 /*
-*	Set fullpage.js 
-*/
+ *	Set fullpage.js 
+ */
 var myFullpage = new fullpage('#fullpage', {
 	//导航
 	menu: '#menu',
 	lockAnchors: false,
-	anchors:['', ''],
+	anchors: ['', ''],
 	navigation: false,
 	navigationPosition: 'right',
 	navigationTooltips: ['firstSlide', 'secondSlide'],
@@ -126,18 +121,22 @@ var myFullpage = new fullpage('#fullpage', {
 	//设计
 	controlArrows: true,
 	verticalCentered: true,
-	sectionsColor : ['white', '#E1EEF6', '#222831', '#222831'],
+	sectionsColor: ['white', '#E1EEF6', '#222831', '#222831'],
 	paddingTop: '',
-	paddingTop: '',	//3em
+	paddingTop: '', //3em
 	paddingBottom: '', //10px
 	// fixedElements: '.navbar',
-	fixedElements:'.navbar',
+	fixedElements: '.navbar',
 
 	responsiveWidth: 0,
 	responsiveHeight: 0,
 	responsiveSlides: false,
 	parallax: false,
-	parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+	parallaxOptions: {
+		type: 'reveal',
+		percentage: 62,
+		property: 'translate'
+	},
 
 	//自定义选择器
 	sectionSelector: '.section',
@@ -145,17 +144,15 @@ var myFullpage = new fullpage('#fullpage', {
 	lazyLoading: true,
 
 	//事件
-	onLeave: function(origin, destination, direction){},
-	afterLoad: function(origin, destination, direction){
-		if(origin.index == 1)
-		{
+	onLeave: function (origin, destination, direction) {},
+	afterLoad: function (origin, destination, direction) {
+		if (origin.index == 1) {
 			vueMain.showTriangle();
 		}
 	},
-	afterRender: function(){},
-	afterResize: function(width, height){},
-	afterResponsive: function(isResponsive){},
-	afterSlideLoad: function(section, origin, destination, direction){},
-	onSlideLeave: function(section, origin, destination, direction){}
+	afterRender: function () {},
+	afterResize: function (width, height) {},
+	afterResponsive: function (isResponsive) {},
+	afterSlideLoad: function (section, origin, destination, direction) {},
+	onSlideLeave: function (section, origin, destination, direction) {}
 });
-
