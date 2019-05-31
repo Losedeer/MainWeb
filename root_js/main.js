@@ -18,30 +18,35 @@ $(document).ready(function() {
 	var starSun = document.getElementById('star_sun');
 	var starEarth = document.getElementById('star_earth');
 	var runTimes = 0
+	var x0 = 0;
+	var y0 = 0;
 
-	function starsMove(oDiv,lineA,lineB){
+	function starsMove(oDiv,lineA,lineB)
+	{
 
-		// alert(oDiv.offsetLeft);
+		//  alert(oDiv.offsetLeft);
 		// alert(oDiv.offsetTop);
-		var yn = 0;
-		var x0 = 0;
-		var y0 = 0;
 
 		if(runTimes == 0)
 		{
+			//static？
 			x0 = oDiv.offsetLeft;
 			y0 = oDiv.offsetTop;
 			runTimes++;
 		}
+		// xn yn 为变动的轨迹
+		//oDiv.offsetLeft 为数值 style.left为对象
 		oDiv.style.left = oDiv.offsetLeft + 1 + 'px';
+		xn = oDiv.offsetLeft + 1;
+		//差量计算
+		yn = lineB * Math.sqrt(1 - (Math.pow(Math.abs(xn - (lineA + x0)),2) / Math.pow(lineA,2) )  ) + y0;
 
+		 oDiv.style.top = yn + 'px';
 		//  alert(x0);
 		 //alert(yn);
 		//oDiv.style.top =  oDiv.offsetTop + 1 + 'px';
 
-		//oDiv.style.top = oDiv.offsetTop + 1 + 'px';
 	}
-
 	//setInterval 3 4 ...为调用函数的参数
 	setInterval(starsMove,30,starEarth,400,234);
 
