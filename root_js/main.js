@@ -15,38 +15,46 @@ $(document).ready(function () {
 
 	var starSun = document.getElementById('star_sun');
 	var starEarth = document.getElementById('star_earth');
-	var runTimes = 0
-	var x0 = 0;
-	var y0 = 0;
+	var earth_x0 = starEarth.offsetLeft;
+	var earth_y0 = starEarth.offsetTop;
+	var earth_heading = true;
 
-	function starsMove(oDiv, lineA, lineB) {
-
-		// alert(oDiv.offsetLeft);
-		// alert(oDiv.offsetTop);
-
-		if (runTimes == 0) {
-			//static？
-			x0 = oDiv.offsetLeft;
-			y0 = oDiv.offsetTop;
-			runTimes++;
-		}
-		// xn yn 为变动的轨迹
+	//orbit move function
+	function orbitMove(oDiv, lineA, lineB,x0,y0) {
+		//x0 y0为初始的点
+		//xn yn为实时运动的点
+		var xn = 0;
+		var yn = 0;
+		//运动点的方向 0初始 1向左 2向右
 		//oDiv.offsetLeft 为数值 style.left为对象
-		oDiv.style.left = oDiv.offsetLeft + 1 + 'px';
-		xn = oDiv.offsetLeft + 1;
-		//差量计算
-		yn = lineB * Math.sqrt(1 - (Math.pow(Math.abs(xn - (lineA + x0)), 2) / Math.pow(lineA, 2))) + y0;
+		if(earth_heading)
+		{
+			earth_heading = ((oDiv.offsetLeft - x0) <= (lineA * 2)) ? true : false;
+		}
+		else
+		{
+			earth_heading = ((oDiv.offsetLeft - x0) == 0) ? true : false;
+		}
+		
+		if(earth_heading)
+		{
+			oDiv.style.left = oDiv.offsetLeft + 2 + 'px';
+			xn = oDiv.offsetLeft;
+			//加7为微调，更加贴近轨道线
+			yn = y0 - lineB * Math.sqrt(1 - (Math.pow(Math.abs(xn - (lineA + x0)), 2) / Math.pow(lineA, 2))) + 7;
 
+		}
+		else
+		{
+			oDiv.style.left = oDiv.offsetLeft - 2 + 'px';
+			xn = oDiv.offsetLeft;
+			yn = lineB * Math.sqrt(1 - (Math.pow(Math.abs(xn - (lineA + x0)), 2) / Math.pow(lineA, 2))) + y0 + 7;
+		}
 		oDiv.style.top = yn + 'px';
-		//alert(x0);
-		//alert(yn);
-		//oDiv.style.top =  oDiv.offsetTop + 1 + 'px';
-
 	}
 	//setInterval 3 4 ...为调用函数的参数
-	setInterval(starsMove, 30, starEarth, 400, 234);
-
-
+	//earth move
+	setInterval(orbitMove, 30, starEarth, 400, 234,earth_x0,earth_y0);
 
 });
 
