@@ -689,6 +689,7 @@ p {
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	overflow: hidden;
 }
 
 #section_4_body #solarsystem {
@@ -697,7 +698,7 @@ p {
 	top: 5px;
 	width: 1500px;
 	height: 1200px;
-	background-color: #1E1E1E;
+	/* background-color: #1E1E1E; */
 }
 
 #section_4_body #solarsystem .orbit {
@@ -719,14 +720,16 @@ p {
 
 	width: 1200px;
 	height: 1200px;
+	left:-400px;
+	top:-800px;
 	border: 1px solid #88DBA3;
 }
 
 #section_4_body #solarsystem #oval_line3 {
-	left:200px;
-	top:600px;
-	width: 600px;
-	height: 600px;
+	left:170px;
+	top:20px;
+	width: 1200px;
+	height: 786px;
 	border: 1px solid #63B8FF;
 }
 
@@ -754,8 +757,8 @@ p {
 }
 
 #section_4_body #solarsystem #star_earth {
-	left: 225px;
-	top: 386px;
+	left: 145px;
+	top: 382px;
 	width: 50px;
 	height: 50px;
 	background-color: #63B8FF;

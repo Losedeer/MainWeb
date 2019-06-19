@@ -57,7 +57,7 @@ $(document).ready(function () {
 	}
 	//setInterval 3 4 ...为调用函数的参数
 	//earth move
-	var timer1 = setInterval(orbitMove, 30, starEarth, 400, 234,earth_x0,earth_y0,earth_heading);
+	var timer1 = setInterval(orbitMove, 30, starEarth, 600, 384,earth_x0,earth_y0,earth_heading);
 	// var timer1 = setInterval(orbitMove, 30, starEarth, 400, 234,earth_x0,earth_y0,earth_heading);
 	// setInterval(orbitMove, 30, starEarth, 600, 350,mars_x0,mars_y0,mars_heading);
 
