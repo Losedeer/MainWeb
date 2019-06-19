@@ -23,25 +23,25 @@ $(document).ready(function () {
 	var mars_heading = true;
 
 	//orbit move function
-	function orbitMove(oDiv, lineA, lineB,x0,y0,heading) {
+	function orbitMove(oDiv, lineA, lineB,x0,y0) {
 		//x0 y0为初始的点
 		//xn yn为实时运动的点
 		var xn = 0;
 		var yn = 0;
 		//运动点的方向 0初始 1向左 2向右
 		//oDiv.offsetLeft 为数值 style.left为对象
-		if(heading)
+		if(earth_heading)
 		{
-			heading = ((oDiv.offsetLeft - x0) <= (lineA * 2)) ? true : false;
+			earth_heading = ((oDiv.offsetLeft - x0) <= (lineA * 2)) ? true : false;
 		}
 		else
 		{
-			heading = ((oDiv.offsetLeft - x0) == 0) ? true : false;
+			earth_heading = ((oDiv.offsetLeft - x0) == 0) ? true : false;
 		}
 		
-		if(heading)
+		if(earth_heading)
 		{
-			oDiv.style.left = oDiv.offsetLeft + 2 + 'px';
+			oDiv.style.left = oDiv.offsetLeft + 1 + 'px';
 			xn = oDiv.offsetLeft;
 			//加7为微调，更加贴近轨道线
 			yn = y0 - lineB * Math.sqrt(1 - (Math.pow(Math.abs(xn - (lineA + x0)), 2) / Math.pow(lineA, 2))) + 7;
@@ -49,7 +49,7 @@ $(document).ready(function () {
 		}
 		else
 		{
-			oDiv.style.left = oDiv.offsetLeft - 2 + 'px';
+			oDiv.style.left = oDiv.offsetLeft - 1 + 'px';
 			xn = oDiv.offsetLeft;
 			yn = lineB * Math.sqrt(1 - (Math.pow(Math.abs(xn - (lineA + x0)), 2) / Math.pow(lineA, 2))) + y0 + 7;
 		}
@@ -58,6 +58,7 @@ $(document).ready(function () {
 	//setInterval 3 4 ...为调用函数的参数
 	//earth move
 	var timer1 = setInterval(orbitMove, 30, starEarth, 400, 234,earth_x0,earth_y0,earth_heading);
+	// var timer1 = setInterval(orbitMove, 30, starEarth, 400, 234,earth_x0,earth_y0,earth_heading);
 	// setInterval(orbitMove, 30, starEarth, 600, 350,mars_x0,mars_y0,mars_heading);
 
 });

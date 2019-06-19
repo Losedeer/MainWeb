@@ -695,8 +695,8 @@ p {
 	/*overflow: hidden;*/
 	position: absolute;
 	top: 5px;
-	width: 1300px;
-	height: 800px;
+	width: 1500px;
+	height: 1200px;
 	background-color: #1E1E1E;
 }
 
@@ -708,24 +708,26 @@ p {
 }
 
 #section_4_body #solarsystem #oval_line1 {
-	left: 50px;
-	top: 70px;
-	width: 1200px;
-	height: 700px;
+	top:200px;
+	left:300px;
+	width: 1700px;
+	height: 1700px;
+	border: 1px solid #FFC125;
 }
 
 #section_4_body #solarsystem #oval_line2 {
-	left: 250px;
-	top: 186px;
-	width: 800px;
-	height: 467px;
+
+	width: 1200px;
+	height: 1200px;
+	border: 1px solid #88DBA3;
 }
 
 #section_4_body #solarsystem #oval_line3 {
-	left: 450px;
-	top: 303px;
-	width: 400px;
-	height: 234px;
+	left:200px;
+	top:600px;
+	width: 600px;
+	height: 600px;
+	border: 1px solid #63B8FF;
 }
 
 #section_4_body #solarsystem .stars {
