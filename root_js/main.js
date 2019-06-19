@@ -13,30 +13,33 @@ $(document).ready(function () {
 	 *	Stars move handele
 	 */
 
-	var starSun = document.getElementById('star_sun');
+	var starMars = document.getElementById('star_mars');
 	var starEarth = document.getElementById('star_earth');
 	var earth_x0 = starEarth.offsetLeft;
 	var earth_y0 = starEarth.offsetTop;
+	var mars_x0 = starMars.offsetLeft;
+	var mars_y0 = starMars.offsetTop;
 	var earth_heading = true;
+	var mars_heading = true;
 
 	//orbit move function
-	function orbitMove(oDiv, lineA, lineB,x0,y0) {
+	function orbitMove(oDiv, lineA, lineB,x0,y0,heading) {
 		//x0 y0为初始的点
 		//xn yn为实时运动的点
 		var xn = 0;
 		var yn = 0;
 		//运动点的方向 0初始 1向左 2向右
 		//oDiv.offsetLeft 为数值 style.left为对象
-		if(earth_heading)
+		if(heading)
 		{
-			earth_heading = ((oDiv.offsetLeft - x0) <= (lineA * 2)) ? true : false;
+			heading = ((oDiv.offsetLeft - x0) <= (lineA * 2)) ? true : false;
 		}
 		else
 		{
-			earth_heading = ((oDiv.offsetLeft - x0) == 0) ? true : false;
+			heading = ((oDiv.offsetLeft - x0) == 0) ? true : false;
 		}
 		
-		if(earth_heading)
+		if(heading)
 		{
 			oDiv.style.left = oDiv.offsetLeft + 2 + 'px';
 			xn = oDiv.offsetLeft;
@@ -54,7 +57,8 @@ $(document).ready(function () {
 	}
 	//setInterval 3 4 ...为调用函数的参数
 	//earth move
-	setInterval(orbitMove, 30, starEarth, 400, 234,earth_x0,earth_y0);
+	var timer1 = setInterval(orbitMove, 30, starEarth, 400, 234,earth_x0,earth_y0,earth_heading);
+	// setInterval(orbitMove, 30, starEarth, 600, 350,mars_x0,mars_y0,mars_heading);
 
 });
 
